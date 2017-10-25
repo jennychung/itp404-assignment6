@@ -1,0 +1,21 @@
+<h1 style="text-align: left; font-weight:bold; font-size: 80pt;"> reddit </h1>
+
+<div style="text-align: left; font-size: 30pt;">
+{{subreddit}}
+
+</div>
+<br>
+
+<form onsubmit={{action "searchReddit"}}>
+
+<div id="searchbar" class="md-form">
+{{input type="text"  id="form1" class="form-control" value=subreddit}}
+
+<button type="submit" class="btn btn-outline-danger waves-effect"> Search </button>
+</div>
+</form>
+
+<br>
+
+<br>
+{{outlet}}
