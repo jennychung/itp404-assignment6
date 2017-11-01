@@ -1,28 +1,10 @@
-{{#each model as |event|}}
-  <div class="event">
-<div id="title">
-{{#if event.data.thumbnail}}
-  <img src={{event.data.thumbnail}} width="30" height="30"/>
-  {{else}}
-    <img src='https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg' width="30" height="30"/>
-{{/if}}
 
-    {{event.data.title}} </div>
+{{#each sortedPosts as |event|}}
 
+{{reddit-post event=event}}
 
-    <div class="d-flex justify-content-end">
-      <div class="mr-auto p-2"> {{event.data.num_comments}} comments </div>
-      <div class="p-2">▲{{event.data.ups}} </div>
-      <div class="p-2">▼{{event.data.downs}}</div>
-      <div class="p-2">  // {{event.data.domain}} </div>
-
-    </div>
-    <br>
-      <hr>
-      <br>
-
-  </div>
 
 {{/each}}
+
 
 {{outlet}}

@@ -1,0 +1,35 @@
+
+  <div class="event">
+<div id="title">
+{{#if event.data.thumbnail}}
+  <img src={{event.data.thumbnail}} width="30" height="30"/>
+  {{else}}
+    <img src='https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg' width="30" height="30"/>
+{{/if}}
+
+    {{event.data.title}} </div>
+
+
+    <div class="d-flex justify-content-end">
+      <div class="mr-auto p-2">
+          {{relative-time event.data.created}}
+        
+          {{event.data.num_comments}} comments </div>
+        
+         
+        
+        
+      <div class="p-2">  // {{event.data.domain}} </div>
+
+         {{vote-control score=event.data.score onvote=(action "changeScore")}}
+
+        
+    </div>
+    <br>
+      <hr>
+      <br>
+
+  </div>
+
+
+{{yield}}
